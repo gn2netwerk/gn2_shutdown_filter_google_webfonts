@@ -1,0 +1,20 @@
+on:
+  release:
+    types: [published]
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Archive Release
+        uses: thedoctor0/zip-release@main
+        with:
+          type: 'zip'
+          filename: 'gn2_shutdown_filter_google_webfonts_wp_plugin.zip'
+          exclusions: '*.git* *.json *.md'
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'gn2_shutdown_filter_google_webfonts_wp_plugin.zip'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
