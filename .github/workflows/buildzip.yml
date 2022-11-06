@@ -11,7 +11,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'gn2_shutdown_filter_google_webfonts_wp_plugin.zip'
-          exclusions: '*.git* *.json *.md'
+          exclusions: '/*.git* /info.json /README.md'
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
