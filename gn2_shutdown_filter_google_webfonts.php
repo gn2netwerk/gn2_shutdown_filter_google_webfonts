@@ -4,7 +4,7 @@
 Plugin Name:  gn2 Shutdown Filter Google Webfonts
 Plugin URI:   https://www.gn2.de/
 Description:  Removes Google webfont links from html
-Version:      1.0.1
+Version:      1.0.2
 Author:       gn2
 Author URI:   https://www.gn2.de/
 Update URI:   https://raw.githubusercontent.com/gn2netwerk/gn2_shutdown_filter_google_webfonts/master/info.json

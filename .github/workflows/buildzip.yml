@@ -10,11 +10,11 @@ jobs:
         uses: thedoctor0/zip-release@main
         with:
           type: 'zip'
-          filename: 'gn2_shutdown_filter_google_webfonts_wp_plugin.zip'
+          filename: 'gn2_shutdown_filter_google_webfonts.zip'
           exclusions: '/*.git* /info.json /README.md'
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: 'gn2_shutdown_filter_google_webfonts_wp_plugin.zip'
+          artifacts: 'gn2_shutdown_filter_google_webfonts.zip'
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
