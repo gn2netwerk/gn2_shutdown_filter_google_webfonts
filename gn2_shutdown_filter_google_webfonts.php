@@ -27,6 +27,10 @@ add_filter('gn2_shutdown', function ($html) {
     foreach ($xpath->query("//link[contains(@href,'fonts.gstatic')]") as $node) {
         $delete[] = $node;
     }
+    // search adobe webfont links
+    foreach ($xpath->query("//link[contains(@href,'use.typekit.net')]") as $node) {
+        $delete[] = $node;
+    }
     if (!$delete) {
         return $html;
     }
